@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Movie DB</string>
+
+    <string name="tab_menu_1">MOVIES</string>
+    <string name="tab_menu_2">TV</string>
+    <string name="tab_menu_3">PROFILE</string>
+
+    <string name="profile_desc">Uygulama geliştirilirken sketch dosyasındaki tasarım baz alınmıştır.</string>
+
+    <string name="movies_top_rated_movies">TOP RATED MOVIES</string>
+    <string name="movies_now_playin">Now Playing</string>
+    <string name="movies_popular">Popular</string>
+    <string name="movie_detail_full_cast_and_crew">Full Cast &amp; Crew </string>
+    <string name="tv_top_title">TV</string>
+    <string name="no_internet">No internet connection!</string>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title=" ">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/back_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:transitionName="backPoster"
+                    android:foreground="@drawable/movie_foreground"
+                    app:layout_scrollFlags="scroll" />
+
+                <TextView
+                    android:id="@+id/moview_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_toRightOf="@+id/poster"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="140dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Lorem Ipsum"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cposter"
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="30dp"
+                    android:fitsSystemWindows="true">
+
+                    <ImageView
+                        android:id="@+id/poster"
+                        android:layout_width="100dp"
+                        android:layout_height="155dp"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitXY"
+                        android:transitionName="posterImageTransition"
+                        app:layout_scrollFlags="scroll" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/genres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="264dp"
+                    android:layout_toRightOf="@+id/cposter"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/vote_avarage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/genres"
+                    android:layout_alignStart="@+id/genres"
+                    android:layout_alignLeft="@+id/genres"
+                    android:layout_marginTop="5dp"
+                    android:text="9.8"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="24sp" />
+
+           <!--     <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/releaseDateTextView"
+                    style="@style/RatingBar"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/genreTextView"
+                    android:progressDrawable="@drawable/custom_ratingbar_selector"
+                    android:numStars="5"
+                    android:rating="4" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/genres"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="17dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/vote_avarage">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_icstarselected"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_icstarselected"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_icstarselected"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_icstarselected"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/ic_icstar"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/overviewTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The parts "
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textview_back"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/movie_detail_full_cast_and_crew"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/crew_rcycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="splash_start_color">#F79904</color>
+    <color name="splash_center_color">#E86139</color>
+    <color name="splash_end_color">#DB3069</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#C9C9C9</color>
+    <color name="whiteopacity50">#80FFFFFF</color>
+    <color name="tab_menu_item_color">#5A5A5A</color>
+    <color name="title_color">#5A5A5A</color>
+    <color name="opacity30black">#30000000</color>
+    <color name="opacity50black">#80000000</color>
+    <color name="theme_color">#f8f8f8</color>
+    <color name="textview_back">#48E0E0E0</color>
+</resources>
