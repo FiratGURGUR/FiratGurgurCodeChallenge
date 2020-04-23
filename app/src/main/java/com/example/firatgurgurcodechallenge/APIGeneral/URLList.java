@@ -5,7 +5,7 @@ import static com.example.firatgurgurcodechallenge.Detail.MovieDetail.movieId;
 
 public class URLList {
 
-    public static String API_KEY = "d8d1b3f9e6a3db84e1c6584fbf8ca8f4";
+    public static String API_KEY = "YOUR_API_KEY";
     public static String BASE_URL = "https://api.themoviedb.org/3/";
     public static String LOW_IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w185/";
     public static String IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original/";
